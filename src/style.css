@@ -1,1 +1,9 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+.jumbotron {
+  text-align: center;
+}
+
+.lead {
+  padding-top: 10px;
+}
