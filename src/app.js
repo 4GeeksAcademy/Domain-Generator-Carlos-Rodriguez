@@ -13,21 +13,15 @@ window.onload = function() {
   let domain = [".com", ".net", ".es"];
   let domains = "";
 
-  for (let i = 0; i < pronoun.length; i++) {
-    for (let b = 0; b < adj.length; b++) {
-      for (let c = 0; c < noun.length; c++) {
-        for (let d = 0; d < domain.length; d++) {
-          domains +=
-            "<li class='text-danger'>" +
-            pronoun[i] +
-            adj[b] +
-            noun[c] +
-            domain[d] +
-            "</li>";
-        }
-      }
-    }
-  }
+  pronoun.forEach(i => {
+    adj.forEach(b => {
+      noun.forEach(c => {
+        domain.forEach(d => {
+          domains += "<li class='text-danger'>" + i + b + c + d + "</li>";
+        });
+      });
+    });
+  });
 
   document.querySelector("#listaDominios").innerHTML = domains;
 };
